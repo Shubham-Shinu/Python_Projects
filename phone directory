@@ -1,0 +1,45 @@
+choise=1
+phone={'kathan':'982347153','khushboo':'7457229484'}
+print phone
+
+def Addnewrecord():
+    name=raw_input("enter a name")
+    no=input("enter a no")
+    phone[name]=no
+    print phone
+
+def Findnumber():
+    name=raw_input("enter a name")
+    
+    if phone.has_key(name):
+        print name,phone[name]
+
+def Changenumber():
+    no=input("enter a new number")
+    phone[name]='no'
+
+def Removerecord():
+    remove=raw_input("enter name which u want to remove")
+    print phone.pop(remove)
+
+def Listofrecord():
+    for name,no in phone.items():
+        print name,no
+while choise<6:
+    print "/t/t 1.Add new record"
+    print "/t/t 2.Find number"
+    print "/t/t 3.Change number"
+    print "/t/t 4.Remove record"
+    print "/t/t 5.List of record"
+
+    choise=input("enter a choise")
+    if choise==1:
+        Addnewrecord()
+    if choise==2:
+        Findnumber()
+    if choise==3:
+        Changenumber()
+    if choise==4:
+        Removerecord()
+    if choise==5:
+        Listofrecord()
